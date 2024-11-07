@@ -8,7 +8,7 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-      - name: Obter o código do projeto
+      - name: Obter o codigo do projeto
         uses: actions/checkout@v4
         
       - name: Autenticar no Docker Hub
@@ -17,7 +17,7 @@ jobs:
             username: ${{ secrets.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_TOKEN }}
       
-      - name: Construção e envio da Imagem Docker
+      - name: Construcao e envio da Imagem Docker
         uses: docker/build-push-action@v6
         with:
             context: ./src
